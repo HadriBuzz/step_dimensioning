@@ -2,8 +2,8 @@ import streamlit as st
 
 st.set_page_config(
     layout="wide",
-    page_title="Home",
-    page_icon="👋",
+    page_title="Settings",
+    page_icon="⚙️",
 )
 
 st.title("STEP dimensioning")
