@@ -8,4 +8,8 @@ st.set_page_config(
 
 st.title("STEP dimensioning")
 
-st.write("Hello world!")
+if "alt_min" not in st.session_state:
+    st.session_state["alt_min"] = 0
+st.number_input("Min altitude", value=st.session_state["alt_min"], key="alt_min")
+
+st.write(st.session_state["alt_min"])
