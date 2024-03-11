@@ -15,7 +15,7 @@ elevation = st.session_state['alt_max'] - st.session_state['alt_min']
 
 st.write(f"Elevation: {elevation} m.")
 
-available_energy = elevation * st.session_state['fluid_mass'] * 9.81
+available_energy = elevation * st.session_state['fluid_mass'] * 9810
 
 st.write(f"Potential Energy: {available_energy} J.")
 

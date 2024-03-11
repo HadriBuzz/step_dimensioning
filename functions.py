@@ -15,14 +15,12 @@ def sidebar():
         st.session_state["time_to_empty"] = 0
     
 
-    st.session_state["alt_min"] = st.sidebar.number_input('Alt min')
-    st.sidebar.write(f"Alt min: {st.session_state['alt_min']} m.")
+    st.session_state["alt_min"] = st.sidebar.slider('Alt min (m)', max_value=1000)
+   
 
-    st.session_state["alt_max"] = st.sidebar.number_input('Alt max')
-    st.sidebar.write(f"Alt max: {st.session_state['alt_max']} m.")
+    st.session_state["alt_max"] = st.sidebar.slider('Alt max (m)', max_value=1000)
 
-    st.session_state["fluid_mass"] = st.sidebar.number_input('Fluid mass')
-    st.sidebar.write(f"Mass: {st.session_state['fluid_mass']} kg.")
+    st.session_state["fluid_mass"] = st.sidebar.number_input('Fluid mass (T)')
 
 
 
