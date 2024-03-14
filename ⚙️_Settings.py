@@ -11,6 +11,8 @@ sidebar()
 
 st.title("STEP dimensioning")
 
+st.write("-----")
+
 elevation = st.session_state['alt_max'] - st.session_state['alt_min']
 
 st.write(f"Elevation: {elevation} m.")
@@ -22,3 +24,5 @@ st.write(f"Available/Potential Energy: {available_energy} J or {available_energy
 
 time_to_empty = st.session_state['time_to_empty']
 st.write(f"Available power: {available_energy / (time_to_empty*3600)} W.")
+
+st.write("-----")
