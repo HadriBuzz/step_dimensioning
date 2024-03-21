@@ -13,6 +13,8 @@ def sidebar():
         st.session_state["conversion_rate"] = 0
     if "time_to_empty" not in st.session_state:
         st.session_state["time_to_empty"] = 0
+    if "h_volume" not in st.session_state:
+        st.session_state["h_volume"] = 0
     
     st.sidebar.subheader("Settings")
     
@@ -25,3 +27,7 @@ def sidebar():
     st.session_state["conversion_rate"] = st.sidebar.slider('Conversion rate (%)', min_value = 50, value=70, max_value=100)
 
     st.session_state["time_to_empty"] = st.sidebar.slider('Time to empty energy stock (Hours)', min_value=1, max_value=48)
+
+    st.sidebar.write("As the fluid level in the tank may affect available enegery, choose the height for the volume (the volume capacity is considered homogeneous through height). ")
+    
+    st.session_state["h_volume"] = st.sidebar.slider('Height of the volume capacity (m)', min_value=1, max_value=48)
